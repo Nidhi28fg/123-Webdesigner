@@ -1,0 +1,86 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+.process-section {
+    padding: 20px;
+}
+
+.process-image {
+    position: relative;
+    margin: 20px auto;
+    width: 300px;
+    height: 200px;
+}
+
+.step-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+/* Default step (Design) */
+#design:checked ~ .process-image #design-img {
+    opacity: 1;
+}
+
+/* When the 'Material Procurement' step is selected */
+#material-procurement:checked ~ .process-image #material-img {
+    opacity: 1;
+}
+
+/* When the 'Dyeing' step is selected */
+#dyeing:checked ~ .process-image #dyeing-img {
+    opacity: 1;
+}
+
+/* When the 'Weaving' step is selected */
+#weaving:checked ~ .process-image #weaving-img {
+    opacity: 1;
+}
+
+/* When the 'Finishing' step is selected */
+#finishing:checked ~ .process-image #finishing-img {
+    opacity: 1;
+}
+
+/* When the 'Inspection' step is selected */
+#inspection:checked ~ .process-image #inspection-img {
+    opacity: 1;
+}
+
+/* Styling the steps (radio button labels) */
+.process-steps {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.step {
+    padding: 10px 20px;
+    cursor: pointer;
+    border: 1px solid #ddd;
+    margin: 0 5px;
+    border-radius: 20px;
+    transition: background-color 0.3s ease;
+}
+
+.step:hover,
+input[type="radio"]:checked + .step {
+    background-color: #333;
+    color: white;
+}
+
+/* Hide the actual radio buttons */
+input[type="radio"] {
+    display: none;
+}
